@@ -25,12 +25,12 @@ On a la possibilité de configurer un réseau en plus, ça serait un sous-résea
 
 2. L'interface appelée lo est l'interface de loopback, habituellement l'adresse de localhost.
 
-3. `sudo apt purge cloud-init`
+3. Pour désinstaller le paquet cloud-init on effectue la commande `sudo apt purge cloud-init`.
 
-4. `sudo hostname set-hostname server.tpadmin.local
-    nano /etc/hosts`
-    On commente la deuxième ligne et on remplace localhost par server server.tpadmin.local, on enregistre et on quitte.
-    On reboot et on vérifie en exécutant la commande `hostname`, la machine nous indique bien server.tpadmin.local.
+4. Pour renommer la machine en "server" on exécute la commande `sudo hostname set-hostname server.tpadmin.local`. Puis on va modifier le fichier /etc/hosts :
+    `nano /etc/hosts`
+On commente la deuxième ligne et on remplace localhost par server server.tpadmin.local, on enregistre et on quitte.
+On reboot et on vérifie en exécutant la commande `hostname`, la machine nous indique bien server.tpadmin.local.
     
 ## Exercice 3. Installation du serveur DHCP
 
